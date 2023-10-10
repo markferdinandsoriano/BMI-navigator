@@ -34,7 +34,7 @@ const UseViewModel = () => {
             getQuotes()
             getOnlyOneResult.current = false
         }
-    }, [])
+    }, [getQuotes])
 
 
     return {

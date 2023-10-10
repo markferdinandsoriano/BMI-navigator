@@ -9,6 +9,7 @@ import Spinner from "@/components/Spinner"
 const BmiResult = ({ fieldsValue }: { fieldsValue: { [key: string]: string } }) => {
     const model = UseViewModel(fieldsValue)
 
+    const healtipsData = model.healthTips
     return (
         <React.Fragment>
 
@@ -47,9 +48,9 @@ const BmiResult = ({ fieldsValue }: { fieldsValue: { [key: string]: string } }) 
 
                         <div className='w-full py-5 px-5 h-auto flex flex-col justify-center items-center'>
                             <h1 className='font-bold text-3xl mb-4'>Health Tips</h1>
-                            {model.healthTips &&
+                            {healtipsData &&
                                 <ul className='list-disc'>
-                                    {model.healthTips?.map((item: string, index: number) => {
+                                    {healtipsData.map((item: string, index: number) => {
                                         return <li key={index} className='mt-3'>{item}</li>
                                     })}
 

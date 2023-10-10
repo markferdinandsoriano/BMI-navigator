@@ -7,7 +7,7 @@ type fieldValue = { [key: string]: string }
 const useViewModel = (fieldsValue: fieldValue) => {
     const [data, setData] = React.useState<{ [key: string]: string }>({})
     const [bmiValue, setBmiValue] = React.useState<number>(0)
-    const [healthTips, setHealthTips] = React.useState<string>('')
+    const [healthTips, setHealthTips] = React.useState<string[]>([])
     const [idealWeight, setIdealWeight] = React.useState<string | number>('')
     const [loading, setLoading] = React.useState<boolean>(false)
 
@@ -102,7 +102,7 @@ const useViewModel = (fieldsValue: fieldValue) => {
         }
     }, [fieldsValue])
 
-    console.log('idealWeight', idealWeight)
+
 
     return {
         data,
