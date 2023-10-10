@@ -1,4 +1,4 @@
-const HealthTips = (category: string | number): any => {
+const HealthTips = (category: any): any => {
     const newCategory = typeof category === 'string' ? category : category.toString()
 
     const tipsObj = {
@@ -30,7 +30,7 @@ const HealthTips = (category: string | number): any => {
             "Medical Evaluation: In some cases, medication or surgical options may be considered.Discuss these options with your healthcare provider if appropriate"
         ]
     }
-
+    //@ts-ignore
     const result = tipsObj[newCategory]
 
     return result
