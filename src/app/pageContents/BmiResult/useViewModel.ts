@@ -52,7 +52,7 @@ const useViewModel = (fieldsValue: fieldValue) => {
             return 50;
         } else if (convertNumber >= 18.5 && convertNumber < 24.9) {
             return 160
-        } else if (convertNumber >= 25 && convertNumber <= 29.9) {
+        } else if (convertNumber >= 25 && 29.9 >= convertNumber) {
             return 260
         } else if (convertNumber >= 30) {
             return 360
