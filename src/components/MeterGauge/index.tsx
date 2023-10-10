@@ -20,7 +20,6 @@ const MeterGuage = ({ value }: { value: number }) => {
 
                         {
                             text: 'Under Weight',
-                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-ignore
                             position: 'INSIDE',
                             color: '#FFFFFF',
@@ -28,21 +27,18 @@ const MeterGuage = ({ value }: { value: number }) => {
 
                         {
                             text: 'Normal',
-                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-ignore
                             position: 'INSIDE',
                             color: '#FFFFFF',
                         },
                         {
                             text: 'Over Weight',
-                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-ignore
                             position: 'INSIDE',
                             color: '#FFFFFF',
                         },
                         {
                             text: 'Obese',
-                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-ignore
                             position: 'INSIDE',
                             color: '#FFFFFF',
@@ -50,7 +46,6 @@ const MeterGuage = ({ value }: { value: number }) => {
                     ]}
                     ringWidth={47}
                     needleTransitionDuration={3333}
-                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                     // @ts-ignore
                     needleTransition={"easeElastic"}
                     needleColor={'#141E46'}

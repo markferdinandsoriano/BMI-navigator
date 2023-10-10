@@ -90,7 +90,7 @@ const useViewModel = (fieldsValue: fieldValue) => {
         } finally {
             setLoading(false)
         }
-    }, [])
+    }, [fieldsValue])
 
 
     React.useEffect(() => {
@@ -100,7 +100,7 @@ const useViewModel = (fieldsValue: fieldValue) => {
         if (!hasEmptyValue) {
             handleBmiResult()
         }
-    }, [fieldsValue, handleBmiResult])
+    }, [handleBmiResult, fieldsValue])
 
 
 
