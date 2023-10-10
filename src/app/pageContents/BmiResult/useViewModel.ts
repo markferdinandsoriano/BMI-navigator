@@ -54,7 +54,7 @@ const useViewModel = (fieldsValue: fieldValue) => {
             return 160
         } else if (convertNumber >= 25 && convertNumber < 29.9) {
             return 260
-        } else if (convertNumber > 30) {
+        } else if (convertNumber >= 30) {
             return 360
         } else {
             return 0
