@@ -1,5 +1,8 @@
+
+
 import React from 'react'
 import ReactSpeedometer from "react-d3-speedometer"
+
 
 const MeterGuage = ({ value }: { value: number }) => {
     return (
@@ -14,29 +17,41 @@ const MeterGuage = ({ value }: { value: number }) => {
                     segmentColors={['#9400FF', '#A8DF8E', '#FF4B91', '#C70039']}
                     currentValueText="You Are"
                     customSegmentLabels={[
+
                         {
                             text: 'Under Weight',
-                            position: "INSIDE",
+                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                            // @ts-ignore
+                            position: 'INSIDE',
                             color: '#FFFFFF',
                         },
+
                         {
                             text: 'Normal',
+                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                            // @ts-ignore
                             position: 'INSIDE',
                             color: '#FFFFFF',
                         },
                         {
                             text: 'Over Weight',
+                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                            // @ts-ignore
                             position: 'INSIDE',
                             color: '#FFFFFF',
                         },
                         {
                             text: 'Obese',
+                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                            // @ts-ignore
                             position: 'INSIDE',
                             color: '#FFFFFF',
                         },
                     ]}
                     ringWidth={47}
                     needleTransitionDuration={3333}
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
                     needleTransition={"easeElastic"}
                     needleColor={'#141E46'}
                     textColor={'#FF6969'}

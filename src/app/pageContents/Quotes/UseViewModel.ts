@@ -9,7 +9,7 @@ const UseViewModel = () => {
 
     let getOnlyOneResult = React.useRef<Boolean>(true);
 
-    const getQuotes = async () => {
+    const getQuotes = React.useCallback(async () => {
         setLoading(true)
         const options = {
             method: 'GET',
@@ -27,7 +27,7 @@ const UseViewModel = () => {
         } finally {
             setLoading(false)
         }
-    }
+    }, [])
 
     useEffect(() => {
         if (getOnlyOneResult.current) {

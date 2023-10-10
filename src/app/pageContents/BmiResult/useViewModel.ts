@@ -61,7 +61,7 @@ const useViewModel = (fieldsValue: fieldValue) => {
         }
     }
 
-    const handleBmiResult = async () => {
+    const handleBmiResult = React.useCallback(async () => {
         const weight = fieldsValue['weight']
         const height = fieldsValue['height']
         const BMIResult = calculateBmi(weight, height)
@@ -90,7 +90,7 @@ const useViewModel = (fieldsValue: fieldValue) => {
         } finally {
             setLoading(false)
         }
-    }
+    }, [])
 
 
     React.useEffect(() => {
@@ -100,7 +100,7 @@ const useViewModel = (fieldsValue: fieldValue) => {
         if (!hasEmptyValue) {
             handleBmiResult()
         }
-    }, [fieldsValue])
+    }, [fieldsValue, handleBmiResult])
 
 
 
