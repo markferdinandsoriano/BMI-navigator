@@ -68,19 +68,11 @@ const useViewModel = (fieldsValue: fieldValue) => {
         setLoading(true)
         if (!BMIResult) return;
 
-        const options = {
-            method: 'GET',
-            url: 'https://body-mass-index-bmi-calculator.p.rapidapi.com/weight-category',
-            params: { bmi: BMIResult },
-            headers: {
-                'X-RapidAPI-Key': '1457b1764emsh0d85f4f261d7c09p186040jsnb8952598f453',
-                'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
-            }
-        };
         try {
-            const response = await axios.request(options);
-            setData(response.data)
-            const newValue = restructureValue(response.data?.bmi)
+            setData({
+                bmi: BMIResult
+            })
+            const newValue = restructureValue(BMIResult)
             setBmiValue(newValue)
             const newTips = HealthTips(newValue);
             setHealthTips(newTips)
@@ -88,7 +80,9 @@ const useViewModel = (fieldsValue: fieldValue) => {
         } catch (error) {
             console.error('error', error);
         } finally {
-            setLoading(false)
+            setTimeout(() => {
+                setLoading(false)
+            }, 1500)
         }
     }, [fieldsValue])
 
@@ -101,8 +95,6 @@ const useViewModel = (fieldsValue: fieldValue) => {
             handleBmiResult()
         }
     }, [handleBmiResult, fieldsValue])
-
-
 
     return {
         data,
